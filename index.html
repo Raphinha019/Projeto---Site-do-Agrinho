@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Responsável - Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i> Agro<span>Futuro</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">O Tema</a>
+                <a href="#jogo">Jogar</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte, Futuro Responsável</h1>
+            <p>A tecnologia e a sustentabilidade caminhando juntas para alimentar o mundo de forma consciente.</p>
+            <a href="#jogo" class="btn-primary">Testar Meus Conhecimentos</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section">
+        <h2>O Desafio do Agro Moderno</h2>
+        <p class="subtitle">Produzir com eficiência absoluta protegendo o nosso planeta.</p>
+        
+        <div class="cards-info-container">
+            <div class="info-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Agro Forte</h3>
+                <p>Uso de drones, GPS, inteligência artificial e biotecnologia para garantir alta produtividade e segurança alimentar.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <h3>Futuro Responsável</h3>
+                <p>Preservação das águas, rotação de culturas, proteção do solo e respeito às comunidades e próximas gerações.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="jogo" class="jogo-section">
+        <h2>Jogo do Campo Sustentável</h2>
+        <p class="subtitle">Analise a prática agrícola e decida: ela ajuda ou prejudica o futuro do Agro?</p>
+
+        <div class="jogo-container">
+            <div id="tela-inicial" class="game-screen active">
+                <i class="fa-solid fa-gamepad game-icon-intro"></i>
+                <h3>Pronto para o Desafio?</h3>
+                <p>Você verá cards com atitudes comuns no campo. Escolha se a atitude é <strong>Certa (Sustentável)</strong> ou <strong>Errada (Irresponsável)</strong>.</p>
+                <button id="btn-iniciar" class="btn-primary">Começar Jogo</button>
+            </div>
+
+            <div id="tela-jogo" class="game-screen">
+                <div class="progresso-container">
+                    <span>Pergunta: <span id="pergunta-atual">1</span>/4</span>
+                    <span>Pontos: <span id="pontos-atual">0</span></span>
+                </div>
+
+                <div class="card-wrapper">
+                    <div id="card-agro" class="card-agro">
+                        <div class="card-icon"><i id="card-fa-icon" class="fa-solid fa-seedling"></i></div>
+                        <p id="card-texto">Texto da pergunta decorrente do script...</p>
+                    </div>
+                </div>
+
+                <div class="botoes-jogo">
+                    <button id="btn-errado" class="btn-game btn-errado"><i class="fa-solid fa-xmark"></i> Errado</button>
+                    <button id="btn-certo" class="btn-game btn-certo"><i class="fa-solid fa-check"></i> Certo</button>
+                </div>
+            </div>
+
+            <div id="tela-feedback" class="game-screen">
+                <div id="feedback-status"></div>
+                <h3>Por que isso acontece?</h3>
+                <p id="feedback-texto">Explicação técnica da resposta...</p>
+                <button id="btn-avancar" class="btn-primary">Próximo Card</button>
+            </div>
+
+            <div id="tela-final" class="game-screen">
+                <i class="fa-solid fa-trophy trophy-icon"></i>
+                <h3>Fim do Desafio!</h3>
+                <p>Você marcou <strong id="pontuação-final">0</strong> de 4 pontos.</p>
+                <p id="mensagem-final">Mensagem personalizada de feedback...</p>
+                <button id="btn-reiniciar" class="btn-primary">Jogar Novamente</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Agrinho - Agro Forte e Futuro Responsável.</p>
+        <p>Desenvolvido para fins educacionais.</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>
