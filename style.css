@@ -1,0 +1,442 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E PALETA DE CORES (Estilo Tecnológico/Natureza)
+   ========================================================================== */
+:root {
+    --primary-color: #2e7d32;   /* Verde escuro puxado para a natureza */
+    --secondary-color: #00e676; /* Verde limão brilhante tecnológico */
+    --accent-color: #ff9100;    /* Laranja para alertas/detalhes */
+    --danger-color: #ff5252;    /* Vermelho para ações incorretas */
+    --dark-bg: #121814;         /* Fundo escuro elegante */
+    --card-bg: #1e2621;         /* Fundo dos cards */
+    --text-color: #e0e0e0;     /* Texto claro */
+    --text-muted: #a0a0a0;     /* Texto secundário */
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Títulos Globais */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Botões Globais Padrão */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+}
+
+/* ==========================================================================
+   HEADER & MENU RESPONSIVO
+   ========================================================================== */
+header {
+    background-color: rgba(18, 24, 20, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION (INTRODUÇÃO)
+   ========================================================================== */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    /* Efeito de degradê moderno simulando campo/tecnologia */
+    background: radial-gradient(circle at center, rgba(46, 125, 50, 0.15) 0%, rgba(12, 18, 20, 1) 70%);
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE (CARDS DE INFORMAÇÃO)
+   ========================================================================== */
+.sobre-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.cards-info-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 45%;
+    min-width: 300px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+}
+
+.info-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   SISTEMA DO JOGO INTERATIVO (CARDS SLIDER STYLE)
+   ========================================================================== */
+.jogo-section {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 80px 20px;
+}
+
+.jogo-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    min-height: 400px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Controle de Telas do Jogo */
+.game-screen {
+    display: none;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-screen.active {
+    display: flex;
+}
+
+/* Ícones das Telas */
+.game-icon-intro, .trophy-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.game-screen h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.game-screen p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Placar e Barra de Progresso */
+.progresso-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Estrutura do Card Dinâmico */
+.card-wrapper {
+    width: 100%;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.card-agro {
+    background: linear-gradient(145deg, #25322a, #1a231d);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+
+/* Efeitos disparados por JavaScript dependendo da resposta */
+.card-agro.swipe-right {
+    transform: translateX(150%) rotate(20deg);
+    opacity: 0;
+}
+
+.card-agro.swipe-left {
+    transform: translateX(-150%) rotate(-20deg);
+    opacity: 0;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+#card-texto {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Botões de Ação de Escolha */
+.botoes-jogo {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.btn-game {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-errado {
+    background-color: var(--danger-color);
+    box-shadow: 0 4px 15px rgba(255, 82, 82, 0.2);
+}
+
+.btn-certo {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.btn-game:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+/* Estilos da Tela de Feedback Individual */
+#feedback-status {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.status-sucesso {
+    color: var(--secondary-color);
+}
+
+.status-erro {
+    color: var(--danger-color);
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #0b0f0c;
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   ANIMAÇÕES PURAS EM CSS
+   ========================================================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================================================================
+   REGRAS DE RESPONSIVIDADE (CELULAR E TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde menu tradicional em telas menores */
+        flex-direction: column;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-menu.open {
+        display: flex; /* Exibido dinamicamente via JS */
+    }
+
+    .nav-menu a {
+        margin: 15px 0;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone hamburguer */
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .info-card {
+        width: 100%; /* Cards de informação ocupam tela cheia no celular */
+    }
+    
+    .jogo-container {
+        padding: 20px;
+    }
+}
